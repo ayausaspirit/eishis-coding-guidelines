@@ -96,6 +96,3 @@ https://www.figma.com/file/FW8FQkGG3uxgXIGemtOO0llp/CSS-directory-structure-diag
     - `.c-btn` `.p-card`
 - 2語以上で命名したい際はスネークケースを使用する（ハイフン使用-）
     - `.main-visual`
-
-<script type="text/javascript" src="https://bagelee.com/wp-content/themes/bagelee/js/prism.js"></script>
-<link rel="stylesheet" type="text/css" href="https://bagelee.com/wp-content/themes/bagelee/css/prism.css" media="all" />
