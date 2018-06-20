@@ -7,22 +7,44 @@
 - 空要素には `/` を入れない
 - 閉じタグは任意でも必ず記入する
 
-![Screen Shot 2018-05-28 at 4.12.58 PM.png (38.1 kB)](https://bagelee.s3-ap-northeast-1.amazonaws.com/uploads/production/attachments/5668/2018/05/28/13434/2097aafc-0a5b-4dc9-824f-89090b766405.png)
+```
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Page title</title>
+    </head>
+    <body>
+      <img src="img/logo.png" alt="company logo">
+      <h1 class="hello-world">Hello, world!</h1>
+    </body>
+</html>
+```
 
 # 必要のないスペース
 エディタで消すように設定する
 
 # DOCTYPE宣言
 下記のように記述する
-![Screen Shot 2018-05-28 at 4.13.36 PM.png (10.9 kB)](https://bagelee.s3-ap-northeast-1.amazonaws.com/uploads/production/attachments/5668/2018/05/28/13434/6e96da5b-f54b-4eb8-bbf2-329a680d4773.png)
+```
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+</html>
+```
 
 # Language属性
 lang="ja"を設定する
-![Screen Shot 2018-05-28 at 4.14.26 PM.png (7.2 kB)](https://bagelee.s3-ap-northeast-1.amazonaws.com/uploads/production/attachments/5668/2018/05/28/13434/055f8ba0-ce9e-48cf-ba95-908c10c1f733.png)
-
+```
+<html lang="ja">
+  <!-- ... -->
+</html>
+```
 # IE compantibility mode
-edg modeでrenderするように設定
-![Screen Shot 2018-05-28 at 4.15.06 PM.png (11.5 kB)](https://bagelee.s3-ap-northeast-1.amazonaws.com/uploads/production/attachments/5668/2018/05/28/13434/2cca2b5c-e655-4d26-87cf-2082255caf43.png)
+edge modeでrenderするように設定
+```
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+```
 
 # headの中身
 
@@ -63,29 +85,55 @@ edg modeでrenderするように設定
 
 # 文字エンコード
 基本UTF-8に設定する
-![Screen Shot 2018-05-28 at 4.15.27 PM.png (9.9 kB)](https://bagelee.s3-ap-northeast-1.amazonaws.com/uploads/production/attachments/5668/2018/05/28/13434/3a8bdb41-f865-456b-b845-e80ef4430ca2.png)
+```
+<head>
+  <meta charset="UTF-8">
+</head>
+```
 
 # CSS と JSの読み込み
 `type` 属性は必要ないので、書かない。
 CSS と JavaScript のファイルは `text/css` と `text/javascript` として読みこむ
-![Screen Shot 2018-05-28 at 4.16.25 PM.png (34.8 kB)](https://bagelee.s3-ap-northeast-1.amazonaws.com/uploads/production/attachments/5668/2018/05/28/13434/c3d114ce-4106-4c87-be0c-cf01e5dc2da7.png)
+```
+<!-- CSS -->
+<link rel="stylesheet" href="code-guide.css">
+
+<!-- JavaScript -->
+<script src="code-guide.js"></script>
+```
 
 # 属性の順番
 属性は読みやすいように以下順番で表記する
-<ul>
-      <li><code>class</code>,<code>id</code></li>
-      <li><code>data-*</code>,<code>name</code>,<code>src</code>, <code>for</code>, <code>type</code>, <code>href</code>, <code>value</code>,<code>title</code>, <code>alt</code>,<code>role</code>, <code>aria-*</code></li>
-    </ul>
 
-![Screen Shot 2018-05-28 at 4.17.35 PM.png (26.3 kB)](https://bagelee.s3-ap-northeast-1.amazonaws.com/uploads/production/attachments/5668/2018/05/28/13434/fa9fc74b-42c1-4aee-80b8-2fbab63d51e1.png)
+<ul>
+  <li><code>class</code>,<code>id</code></li>
+  <li><code>data-*</code>,<code>name</code>,<code>src</code>, <code>for</code>, <code>type</code>, <code>href</code>, <code>value</code>,<code>title</code>, <code>alt</code>,<code>role</code>, <code>aria-*</code></li>
+</ul>
+
 
 # ブーリアン属性
 `disabled` や `checked` などのブーリアン属性には `value` を追加しない
-![Screen Shot 2018-05-28 at 4.18.55 PM.png (27.2 kB)](https://bagelee.s3-ap-northeast-1.amazonaws.com/uploads/production/attachments/5668/2018/05/28/13434/c9ebe15c-e367-48cc-aa92-34cde824edff.png)
+```
+<input type="text" disabled>
+
+<input type="checkbox" value="1" checked>
+
+<select>
+  <option value="1" selected>1</option>
+</select>
+```
 
 # マークアップはなるべく簡潔に
 必要ない要素は取り除き、なるべくマークアップを簡潔にまとめる
-![Screen Shot 2018-05-28 at 4.19.34 PM.png (22.0 kB)](https://bagelee.s3-ap-northeast-1.amazonaws.com/uploads/production/attachments/5668/2018/05/28/13434/e0de7c89-a394-40ad-9f1f-a08fb47e4a65.png)
+```
+<!-- 避ける -->
+<span class="avatar">
+  <img src="...">
+</span>
+
+<!-- こちらがOK -->
+<img class="avatar" src="...">
+```
 
 # HTMLディレクトリ構造
 
