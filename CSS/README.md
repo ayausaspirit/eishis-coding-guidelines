@@ -3,7 +3,7 @@ CSSのコーディングガイドラインです
 
 ## ディレクトリ構成
 
-~img~
+![directory](directory.png)
 
 ### Figma
 https://www.figma.com/file/FW8FQkGG3uxgXIGemtOO0llp/CSS-directory-structure-diagram/duplicate
