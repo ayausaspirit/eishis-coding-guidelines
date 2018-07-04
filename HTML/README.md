@@ -137,7 +137,7 @@ CSS と JavaScript のファイルは `text/css` と `text/javascript` として
 
 # HTMLディレクトリ構造
 
-![HTML directory asset](../assets/html.png)
+![directory](../assets/html.png)
 
 ※ただし２ページ以下の場合はrootに下層ページをおいても問題ないものとする
 ※HTMLディレクトリ構造を変更する場合は下記Figmaより変更する
